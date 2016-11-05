@@ -88,4 +88,34 @@ ncol(df)
 str(df)
 summary(df)
 names(df)
+#Factor- categorical data : How many arizona are there etc. Survey- ppl in this room,state born
+# R will automatically assumes, the strings are factors. 
+
+##explicitly create factor by 
+state <- factor(c("Arizona","Colorado","Arizona"))
+state
+nlevels(state)
+levels(state)
+
+ratings <- factor(c("low","high","medium","low"))
+ratings
+min(ratings) # doesnt work coz its string
+
+ratings <- factor(ratings,levels=c("low","high","medium"),ordered = TRUE)
+levels(ratings)
+min(ratings)
+
+survey = data.frame(name=c("Jack","Jill","Maria","Clark","Steve"), sex=c("M","f","F","M","M"))
+str(survey)
+
+barplot(table(survey$sex))
+survey$sex[survey$sex == 'f'] <- "F"
+survey
+survey$sex <- droplevels(survey$sex)
+
+
+# Exercise, which col in gapminder dataset are factors, hint use 'str' or summary
+
+str(gapminder)
+
 
