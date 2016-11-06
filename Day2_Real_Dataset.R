@@ -25,12 +25,14 @@ mean(specific_country_data[,5])
 
 #Transforming all the logic above in to a Function now 
 # R by default returns the first output and ignores the rest. 
-analyse <- function (country){
-  specific_country_data <- subset(data1,data1$country == country)
- print(mean(specific_country_data[,5]))
- print(min(specific_country_data[,5]))
- print(max(specific_country_data[,5]))
-  
+analyse <- function (coun_name){
+  specific_country_data <- subset(data1,data1$country == coun_name)
+ #print(mean(specific_country_data[,5]))
+ #print(min(specific_country_data[,5]))
+ #print(max(specific_country_data[,5]))
+  out <- c("Mean_le"= mean(specific_country_data[,5]), "Min_le"=min(specific_country_data[,5]),
+           "Max_le"=max(specific_country_data[,5])) 
+  print(out)
 }
 
 analyse("Uganda")
