@@ -23,8 +23,10 @@ str(long_lived)
 # Create two boxplot
 sixtythree=head(gapminder[gapminder$year==1962,])
 sixtythree
-boxplot(sixtythree$continent,sixtythree$lifeExp)
-boxplot(gapminder$year,gapminder$lifeExp)
+plot(sixtythree$continent,sixtythree$lifeExp , main= "Continents vs Life Expectancies",
+     xlab="Continents",ylab="Life Expectancies")
+plot(gapminder$year,gapminder$lifeExp,main= "Years vs Life Expectancies",
+     xlab="Years",ylab="Life Expectancies")
 
 
 
