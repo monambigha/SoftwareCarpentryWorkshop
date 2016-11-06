@@ -35,7 +35,7 @@ fah_to_kelvin <- function (fah){
    return(kelv)
 }
 
-fah_to_kelvin(asc('m'))
+fah_to_kelvin(32)
 
 asc('M')
 
@@ -68,11 +68,8 @@ fence <-function(best_practice,asterix){
 
 fence(best_practice,asterix)
 
-
-
-
 #Create a import function
-source("fah_to_cel.R")
+source("fah_to_temp.R")
 
 
 
